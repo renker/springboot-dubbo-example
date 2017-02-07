@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.renker</groupId>
+  <artifactId>dubbosbt-parent</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  
+  <parent>
+       <groupId>org.springframework.boot</groupId>
+       <artifactId>spring-boot-starter-parent</artifactId>
+       <version>1.3.5.RELEASE</version>
+       <relativePath/> <!-- lookup parent from repository -->
+  </parent>
+  
+  <modules>
+  	<module>dubbosbt-web-manage</module>
+  	<module>dubbosbt-api-person</module>
+  	<module>dubbosbt-service-person</module>
+  </modules>
+  
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <dubbosbt.version>0.0.1-SNAPSHOT</dubbosbt.version>
+  </properties>
+  
+  <dependencyManagement>
+  	<dependencies>
+  		<dependency>
+  			<groupId>com.renker</groupId>
+		    <artifactId>dubbosbt-api-person</artifactId>
+		    <version>${dubbosbt.version}</version>
+  		</dependency>
+  		
+  		<dependency>
+  			<groupId>com.renker</groupId>
+		    <artifactId>dubbosbt-service-person</artifactId>
+		    <version>${dubbosbt.version}</version>
+  		</dependency>
+  		
+  	</dependencies>
+  </dependencyManagement>
+  
+  <dependencies>
+  
+  </dependencies>
+  
+  <build>
+  	<plugins>  
+        <plugin>  
+            <groupId>org.apache.maven.plugins</groupId>  
+            <artifactId>maven-compiler-plugin</artifactId>  
+            <configuration>  
+                <source>1.8</source>  
+                <target>1.8</target>  
+            </configuration>  
+        </plugin>  
+    </plugins>  
+  </build>
+  
+</project>
